@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Support - TrustQA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-container">
+      <a href="index.html" class="logo">TrustQA</a>
+      <ul class="nav-links">
+        <li><a href="index.html#product">Product</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+        <li><a href="support.html">Support</a></li>
+        <li><a href="index.html#contact" class="btn btn-primary">Get Started</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Support Content -->
+  <div class="legal-page">
+    <h1>Support Center</h1>
+    <p>We're here to help! Find answers to common questions or get in touch with our support team.</p>
+    
+    <h2>Frequently Asked Questions</h2>
+    
+    <h3>Getting Started</h3>
+    <div class="faq-section">
+      <h4>How do I create an account?</h4>
+      <p>You can create an account by downloading the TrustQA app from the App Store or Google Play Store. Once installed, tap "Sign Up" and follow the on-screen instructions to create your account using your email address or phone number.</p>
+      
+      <h4>How do I verify my account?</h4>
+      <p>After signing up, you'll receive a verification code via email or SMS. Enter this code in the app to verify your account. Verified accounts have access to additional features and help maintain the integrity of our platform.</p>
+      
+      <h4>I forgot my password. How do I reset it?</h4>
+      <p>You can reset your password by tapping "Forgot Password" on the login screen. You'll be redirected to our password reset page where you can choose to receive a verification code via email or phone number. Once verified, you can set a new password.</p>
+    </div>
+    
+    <h3>Using TrustQA</h3>
+    <div class="faq-section">
+      <h4>How does review verification work?</h4>
+      <p>TrustQA uses advanced verification systems to authenticate reviews and ensure they come from real users with genuine experiences. Our system checks various signals to verify authenticity, helping you make informed decisions based on trusted information.</p>
+      
+      <h4>Can I edit or delete my reviews?</h4>
+      <p>Yes, you can edit or delete your reviews at any time from your profile. Simply go to "My Reviews" in the app, select the review you want to modify, and choose to edit or delete it.</p>
+      
+      <h4>How do I report inappropriate content?</h4>
+      <p>If you encounter content that violates our community guidelines, you can report it by tapping the three-dot menu on any review or content item and selecting "Report." Our team reviews all reports and takes appropriate action.</p>
+    </div>
+    
+    <h3>Account & Security</h3>
+    <div class="faq-section">
+      <h4>How do I change my email address or phone number?</h4>
+      <p>You can update your contact information in the app settings under "Account Information." You'll need to verify the new email address or phone number before the change takes effect.</p>
+      
+      <h4>How do I delete my account?</h4>
+      <p>To delete your account, go to Settings > Account > Delete Account. Please note that account deletion is permanent and cannot be undone. All your reviews and data will be removed from our platform.</p>
+      
+      <h4>Is my personal information secure?</h4>
+      <p>Yes, we take your privacy and security seriously. We use industry-standard encryption and security measures to protect your data. For more information, please review our <a href="privacy.html">Privacy Policy</a>.</p>
+    </div>
+    
+    <h3>Technical Issues</h3>
+    <div class="faq-section">
+      <h4>The app is crashing or not loading properly</h4>
+      <p>Try the following troubleshooting steps:</p>
+      <ul>
+        <li>Close and restart the app</li>
+        <li>Check for app updates in the App Store or Google Play Store</li>
+        <li>Restart your device</li>
+        <li>Clear the app cache (Android) or reinstall the app</li>
+        <li>Ensure you have a stable internet connection</li>
+      </ul>
+      <p>If the issue persists, please contact our support team with details about your device and the problem you're experiencing.</p>
+      
+      <h4>I'm not receiving verification codes</h4>
+      <p>If you're not receiving verification codes:</p>
+      <ul>
+        <li>Check your spam or junk folder for emails</li>
+        <li>Ensure your phone number is correct and can receive SMS</li>
+        <li>Wait a few minutes and try requesting a new code</li>
+        <li>Check that your email address or phone number is verified in your account settings</li>
+      </ul>
+      
+      <h4>How do I update the app?</h4>
+      <p>App updates are available through the App Store (iOS) or Google Play Store (Android). Enable automatic updates in your device settings to always have the latest version, or manually check for updates in the respective app stores.</p>
+    </div>
+    
+    <h2>Contact Support</h2>
+    <p>Can't find what you're looking for? Our support team is here to help.</p>
+    
+    <div class="contact-info" style="margin: var(--spacing-lg) 0;">
+      <p><strong>Email:</strong> <a href="mailto:admin@trustqa.app">admin@trustqa.app</a></p>
+      <p><strong>Location:</strong> Doha, Qatar</p>
+      <p><strong>Response Time:</strong> We typically respond within 24-48 hours during business days.</p>
+    </div>
+    
+    <div class="contact-form-container" style="margin-top: var(--spacing-xl);">
+      <h3>Send us a Message</h3>
+      <form class="contact-form" id="supportForm">
+        <div class="form-group">
+          <label for="support-name">Name</label>
+          <input type="text" id="support-name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="support-email">Email</label>
+          <input type="email" id="support-email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="support-subject">Subject</label>
+          <select id="support-subject" name="subject" required>
+            <option value="">Select a topic...</option>
+            <option value="account">Account Issues</option>
+            <option value="technical">Technical Support</option>
+            <option value="billing">Billing & Payments</option>
+            <option value="feature">Feature Request</option>
+            <option value="bug">Report a Bug</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="support-message">Message</label>
+          <textarea id="support-message" name="message" rows="6" required placeholder="Please describe your issue or question in detail..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+        <div class="form-message" id="supportFormMessage"></div>
+      </form>
+    </div>
+    
+    <h2>Additional Resources</h2>
+    <ul style="margin-top: var(--spacing-md);">
+      <li><a href="terms.html">Terms of Service</a> - Read our terms and conditions</li>
+      <li><a href="privacy.html">Privacy Policy</a> - Learn how we protect your data</li>
+      <li><a href="index.html#product">Product Features</a> - Discover what TrustQA offers</li>
+    </ul>
+    
+    <p style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border);">
+      <a href="index.html">← Back to Home</a>
+    </p>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <ul class="footer-links">
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="terms.html">Terms of Use</a></li>
+        <li><a href="support.html">Support</a></li>
+      </ul>
+      <p class="footer-copyright">© 2026 TrustQA</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    // Support form handling
+    document.addEventListener('DOMContentLoaded', function() {
+      const supportForm = document.getElementById('supportForm');
+      const formMessage = document.getElementById('supportFormMessage');
+      
+      if (supportForm) {
+        supportForm.addEventListener('submit', function(e) {
+          e.preventDefault();
+          
+          const formData = new FormData(supportForm);
+          const name = formData.get('name');
+          const email = formData.get('email');
+          const subject = formData.get('subject');
+          const message = formData.get('message');
+          
+          // Simple validation
+          if (!name || !email || !subject || !message) {
+            showMessage('Please fill in all fields.', 'error');
+            return;
+          }
+          
+          // Simulate form submission (you can integrate with your backend here)
+          showMessage('Thank you for contacting us! We\'ll get back to you soon.', 'success');
+          supportForm.reset();
+          
+          // In a real implementation, you would send this data to your backend
+          // Example: fetch('/api/support', { method: 'POST', body: formData });
+        });
+      }
+      
+      function showMessage(text, type) {
+        if (formMessage) {
+          formMessage.textContent = text;
+          formMessage.className = 'form-message ' + type;
+          formMessage.style.display = 'block';
+          
+          setTimeout(function() {
+            formMessage.style.display = 'none';
+          }, 5000);
+        }
+      }
+    });
+  </script>
+</body>
+</html>

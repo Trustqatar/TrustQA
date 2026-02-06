@@ -801,6 +801,35 @@ footer {
   text-decoration: underline;
 }
 
+/* FAQ Sections */
+.faq-section {
+  margin-bottom: var(--spacing-xl);
+}
+
+.faq-section h4 {
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-top: var(--spacing-md);
+  margin-bottom: var(--spacing-sm);
+}
+
+.faq-section p {
+  margin-bottom: var(--spacing-md);
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.faq-section ul {
+  margin-left: var(--spacing-lg);
+  margin-bottom: var(--spacing-md);
+  color: var(--text-secondary);
+}
+
+.faq-section li {
+  margin-bottom: var(--spacing-xs);
+}
+
 /* Reset Password Page */
 .reset-section {
   min-height: 100vh;
