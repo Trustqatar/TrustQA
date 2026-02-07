@@ -30,20 +30,137 @@
     <div class="hero-visual">
       <div class="phone-mockup">
         <div class="phone-screen">
-          <div class="review-card-mini">
-            <div class="review-header">
-              <div class="verified-badge">✓ Verified</div>
-              <div class="stars">★★★★★</div>
-            </div>
-            <p>"Great service!"</p>
+          <!-- App Bar -->
+          <div class="app-bar">
+            <div class="app-bar-icon">☰</div>
+            <div class="app-bar-title">TrustQA</div>
+            <div class="app-bar-icon">🔍</div>
           </div>
-          <div class="review-card-mini">
-            <div class="review-header">
-              <div class="verified-badge">✓ Verified</div>
-              <div class="stars">★★★★☆</div>
+          
+          <!-- Restaurant Header -->
+          <div class="restaurant-header">
+            <div class="restaurant-info">
+              <h4>The Blue Café</h4>
+              <div class="restaurant-meta">
+                <span class="rating-badge">4.8 ★</span>
+                <span class="verified-pill">✓ Verified</span>
+                <span class="review-count">248 reviews</span>
+              </div>
             </div>
-            <p>"Highly recommend"</p>
           </div>
+          
+          <!-- Reviews Feed (scrollable) -->
+          <div class="reviews-feed">
+            <div class="reviews-scroll">
+              <!-- Review 1 -->
+              <div class="review-card-mini">
+                <div class="review-user">
+                  <div class="user-avatar">JD</div>
+                  <div class="user-info">
+                    <span class="user-name">John Doe</span>
+                    <span class="review-time">2 days ago</span>
+                  </div>
+                  <div class="stars-mini">★★★★★</div>
+                </div>
+                <p class="review-text">"Amazing experience! The service was excellent and the atmosphere was perfect."</p>
+              </div>
+              
+              <!-- Review 2 -->
+              <div class="review-card-mini">
+                <div class="review-user">
+                  <div class="user-avatar">SA</div>
+                  <div class="user-info">
+                    <span class="user-name">Sarah Anderson</span>
+                    <span class="review-time">5 days ago</span>
+                  </div>
+                  <div class="stars-mini">★★★★☆</div>
+                </div>
+                <p class="review-text">"Great food and friendly staff. Highly recommend!"</p>
+              </div>
+              
+              <!-- Review 3 -->
+              <div class="review-card-mini">
+                <div class="review-user">
+                  <div class="user-avatar">MK</div>
+                  <div class="user-info">
+                    <span class="user-name">Mike Khan</span>
+                    <span class="review-time">1 week ago</span>
+                  </div>
+                  <div class="stars-mini">★★★★★</div>
+                </div>
+                <p class="review-text">"Best coffee in town! The ambiance is cozy and inviting."</p>
+              </div>
+              
+              <!-- Review 4 -->
+              <div class="review-card-mini">
+                <div class="review-user">
+                  <div class="user-avatar">EL</div>
+                  <div class="user-info">
+                    <span class="user-name">Emma Lee</span>
+                    <span class="review-time">1 week ago</span>
+                  </div>
+                  <div class="stars-mini">★★★★★</div>
+                </div>
+                <p class="review-text">"Fantastic place! Will definitely come back."</p>
+              </div>
+              
+              <!-- Review 5 -->
+              <div class="review-card-mini">
+                <div class="review-user">
+                  <div class="user-avatar">TC</div>
+                  <div class="user-info">
+                    <span class="user-name">Tom Chen</span>
+                    <span class="review-time">2 weeks ago</span>
+                  </div>
+                  <div class="stars-mini">★★★★☆</div>
+                </div>
+                <p class="review-text">"Good quality and reasonable prices. Worth visiting!"</p>
+              </div>
+              
+              <!-- Review 6 -->
+              <div class="review-card-mini">
+                <div class="review-user">
+                  <div class="user-avatar">AL</div>
+                  <div class="user-info">
+                    <span class="user-name">Aisha Lopez</span>
+                    <span class="review-time">2 weeks ago</span>
+                  </div>
+                  <div class="stars-mini">★★★★★</div>
+                </div>
+                <p class="review-text">"Outstanding service and delicious menu options."</p>
+              </div>
+              
+              <!-- Review 7 -->
+              <div class="review-card-mini">
+                <div class="review-user">
+                  <div class="user-avatar">RB</div>
+                  <div class="user-info">
+                    <span class="user-name">Rachel Brown</span>
+                    <span class="review-time">3 weeks ago</span>
+                  </div>
+                  <div class="stars-mini">★★★★★</div>
+                </div>
+                <p class="review-text">"Absolutely loved it! Clean, modern, and welcoming."</p>
+              </div>
+              
+              <!-- Review 8 -->
+              <div class="review-card-mini">
+                <div class="review-user">
+                  <div class="user-avatar">DW</div>
+                  <div class="user-info">
+                    <span class="user-name">David Wilson</span>
+                    <span class="review-time">3 weeks ago</span>
+                  </div>
+                  <div class="stars-mini">★★★★☆</div>
+                </div>
+                <p class="review-text">"Nice spot for a quick bite. Very convenient location."</p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Fade gradients for scroll effect -->
+          <div class="scroll-fade-top"></div>
+          <div class="scroll-fade-bottom"></div>
         </div>
       </div>
       <!-- Floating elements -->
@@ -107,26 +224,64 @@
   <section class="contact" id="contact">
     <h2>Get in Touch</h2>
     <div class="contact-container">
-      <div class="contact-info">
-        <h3>Contact Us</h3>
-        <p>Doha, Qatar</p>
-        <p><a href="mailto:admin@trustqa.app">admin@trustqa.app</a></p>
+      <div class="contact-info-card">
+        <div class="contact-info-header">
+          <h3>Let's Talk</h3>
+          <p class="contact-subtitle">We'd love to hear from you</p>
+        </div>
+        
+        <div class="contact-details">
+          <div class="contact-detail-item">
+            <div class="contact-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </div>
+            <div class="contact-detail-content">
+              <span class="contact-label">Location</span>
+              <span class="contact-value">Doha, Qatar</span>
+            </div>
+          </div>
+          
+          <div class="contact-detail-item">
+            <div class="contact-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+            </div>
+            <div class="contact-detail-content">
+              <span class="contact-label">Email</span>
+              <a href="mailto:admin@trustqa.app" class="contact-value">admin@trustqa.app</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="contact-response-time">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <polyline points="12 6 12 12 16 14"></polyline>
+          </svg>
+          <span>We reply within 24 hours</span>
+        </div>
       </div>
+      
       <div class="contact-form-container">
         <form class="contact-form" id="contactForm">
           <div class="form-group">
             <label for="name">Name</label>
-            <input type="text" id="name" name="name" required>
+            <input type="text" id="name" name="name" placeholder="John Doe" required>
           </div>
           <div class="form-group">
             <label for="email">Email</label>
-            <input type="email" id="email" name="email" required>
+            <input type="email" id="email" name="email" placeholder="john@example.com" required>
           </div>
           <div class="form-group">
             <label for="message">Message</label>
-            <textarea id="message" name="message" required></textarea>
+            <textarea id="message" name="message" placeholder="Tell us how we can help..." required></textarea>
           </div>
-          <button type="submit" class="btn btn-primary">Send Message</button>
+          <button type="submit" class="btn btn-primary btn-contact">Send Message</button>
           <div class="form-message" id="formMessage"></div>
         </form>
       </div>

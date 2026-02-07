@@ -65,7 +65,7 @@ const observer = new IntersectionObserver((entries) => {
 
 // Observe all elements with fade-in class
 document.addEventListener('DOMContentLoaded', () => {
-  const fadeElements = document.querySelectorAll('.fade-in, .feature-card');
+  const fadeElements = document.querySelectorAll('.fade-in, .feature-card, .contact-info-card, .contact-form-container');
   fadeElements.forEach(el => observer.observe(el));
 });
 
@@ -153,4 +153,12 @@ document.addEventListener('DOMContentLoaded', () => {
       card.style.transform = 'translateY(0) rotateX(0) rotateY(0)';
     });
   });
+  
+  // Infinite scroll for phone reviews
+  const reviewsScroll = document.querySelector('.reviews-scroll');
+  if (reviewsScroll) {
+    // Clone reviews for infinite scroll effect
+    const reviews = reviewsScroll.innerHTML;
+    reviewsScroll.innerHTML = reviews + reviews;
+  }
 });
