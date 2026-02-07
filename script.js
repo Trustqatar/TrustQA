@@ -1,5 +1,35 @@
 // TrustQA - Smooth scrolling and animations
 
+// Navbar scroll effect
+let lastScroll = 0;
+const nav = document.querySelector('nav');
+
+window.addEventListener('scroll', () => {
+  const currentScroll = window.pageYOffset;
+  
+  if (currentScroll > 50) {
+    nav.style.boxShadow = '0 4px 30px rgba(44, 95, 125, 0.12)';
+    nav.style.background = 'rgba(255, 255, 255, 0.9)';
+  } else {
+    nav.style.boxShadow = '0 2px 24px rgba(44, 95, 125, 0.06)';
+    nav.style.background = 'rgba(255, 255, 255, 0.8)';
+  }
+  
+  lastScroll = currentScroll;
+});
+
+// Subtle parallax effect for floating elements
+window.addEventListener('scroll', () => {
+  const scrolled = window.pageYOffset;
+  const floatingElements = document.querySelectorAll('.floating-element');
+  
+  floatingElements.forEach((el, index) => {
+    const speed = 0.02 + (index * 0.01);
+    const yPos = -(scrolled * speed);
+    el.style.transform = `translateY(${yPos}px)`;
+  });
+});
+
 // Smooth scroll for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
@@ -95,4 +125,32 @@ document.addEventListener('DOMContentLoaded', () => {
     contactContainer.classList.add('fade-in');
     observer.observe(contactContainer);
   }
+  
+  // Add staggered animation to floating elements
+  const floatingElements = document.querySelectorAll('.floating-element');
+  floatingElements.forEach((el, index) => {
+    el.style.animationDelay = `${index * 0.2}s`;
+  });
+  
+  // Add hover tilt effect to feature cards
+  const featureCards = document.querySelectorAll('.feature-card');
+  featureCards.forEach(card => {
+    card.addEventListener('mousemove', (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      
+      const centerX = rect.width / 2;
+      const centerY = rect.height / 2;
+      
+      const rotateX = (y - centerY) / 20;
+      const rotateY = (centerX - x) / 20;
+      
+      card.style.transform = `translateY(-8px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+    });
+    
+    card.addEventListener('mouseleave', () => {
+      card.style.transform = 'translateY(0) rotateX(0) rotateY(0)';
+    });
+  });
 });
