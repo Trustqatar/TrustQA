@@ -3,10 +3,12 @@
 // Navbar scroll effect
 let lastScroll = 0;
 const nav = document.querySelector('nav');
+const scrollIndicator = document.querySelector('.scroll-indicator');
 
 window.addEventListener('scroll', () => {
   const currentScroll = window.pageYOffset;
   
+  // Enhanced navbar on scroll
   if (currentScroll > 50) {
     nav.style.boxShadow = '0 4px 30px rgba(44, 95, 125, 0.12)';
     nav.style.background = 'rgba(255, 255, 255, 0.9)';
@@ -15,8 +17,28 @@ window.addEventListener('scroll', () => {
     nav.style.background = 'rgba(255, 255, 255, 0.8)';
   }
   
+  // Hide scroll indicator when scrolling
+  if (scrollIndicator && currentScroll > 100) {
+    scrollIndicator.style.opacity = '0';
+    scrollIndicator.style.transform = 'translateX(-50%) translateY(20px)';
+  } else if (scrollIndicator && currentScroll <= 100) {
+    scrollIndicator.style.opacity = '1';
+    scrollIndicator.style.transform = 'translateX(-50%) translateY(0)';
+  }
+  
   lastScroll = currentScroll;
 });
+
+// Scroll indicator click handler
+const scrollIndicatorEl = document.querySelector('.scroll-indicator');
+if (scrollIndicatorEl) {
+  scrollIndicatorEl.addEventListener('click', () => {
+    const featuresSection = document.querySelector('.features');
+    if (featuresSection) {
+      featuresSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+}
 
 // Subtle parallax effect for floating elements
 window.addEventListener('scroll', () => {
@@ -160,5 +182,51 @@ document.addEventListener('DOMContentLoaded', () => {
     // Clone reviews for infinite scroll effect
     const reviews = reviewsScroll.innerHTML;
     reviewsScroll.innerHTML = reviews + reviews;
+  }
+  
+  // Mobile hamburger menu toggle
+  const menuToggle = document.querySelector('.mobile-menu-toggle');
+  const navLinks = document.querySelector('.nav-links');
+  const menuOverlay = document.querySelector('.menu-overlay');
+  const body = document.body;
+  
+  function closeMenu() {
+    menuToggle.classList.remove('active');
+    navLinks.classList.remove('active');
+    menuOverlay.classList.remove('active');
+    body.style.overflow = '';
+  }
+  
+  function openMenu() {
+    menuToggle.classList.add('active');
+    navLinks.classList.add('active');
+    menuOverlay.classList.add('active');
+    body.style.overflow = 'hidden';
+  }
+  
+  if (menuToggle && navLinks && menuOverlay) {
+    menuToggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      if (navLinks.classList.contains('active')) {
+        closeMenu();
+      } else {
+        openMenu();
+      }
+    });
+    
+    // Close menu when clicking a link
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', closeMenu);
+    });
+    
+    // Close menu when clicking overlay
+    menuOverlay.addEventListener('click', closeMenu);
+    
+    // Close menu on escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && navLinks.classList.contains('active')) {
+        closeMenu();
+      }
+    });
   }
 });
